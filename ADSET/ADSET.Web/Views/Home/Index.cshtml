@@ -1,6 +1,7 @@
 ﻿@using ADSET.Application.DTOs.Enums
 @using System.Text.Json
 @using ADSET.Web.DTOs.Requests
+@using System.Globalization
 @model IndexViewModel;
 
 @{
@@ -358,7 +359,7 @@
                                         </div>
                                         <div class="col-12 bg-white text-center">
                                             <div class="style-diagonal"></div>
-                                            <span class="text-success fs-5 fw-bold">R$ @Html.DisplayFor(modelItem => veiculo.Preco)</span>
+                                            <span class="text-success fs-5 fw-bold">@string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", veiculo.Preco)</span>
                                         </div>
                                     </div>
                                 </div>
